@@ -8,35 +8,23 @@ using static System.Net.Mime.MediaTypeNames;
 namespace tictactoe
 {
     class Program
-    {     
-        static void Main(string[] args)
-        {
-           
-
-           
-
-                int player = 1;
-#region InitializeBoard
-
-            string[,] board = new string[3, 3]
-                {
+    {
+        static string[,] board = new string[3, 3]
+            {
                 { "1", "2", "3" },
                 { "4", "5", "6" },
                 { "7", "8", "9" }
                 };
+        static int rowLength = board.GetLength(0);
+        static int colLength = board.GetLength(1);
+        static void Main(string[] args)
+        {
+           
+             int player = 1;
+            #region InitializeBoard
+            
+            setBoard();
 
-                int rowLength = board.GetLength(0);
-                int colLength = board.GetLength(1);
-
-                for (int i = 0; i < rowLength; i++)
-                {
-                    for (int j = 0; j < colLength; j++)
-                    {
-                        Console.Write(" {0} ", board[i, j] + "\t");
-
-                    }
-                    Console.WriteLine();
-                }
 #endregion InitializeBoard
 
 
@@ -45,7 +33,7 @@ namespace tictactoe
 
             do
             {
-
+               
                 if (player == 1)
                 {
                     Console.WriteLine("Player 1: enter value to cross");
@@ -195,12 +183,7 @@ namespace tictactoe
                         player = 3;
 
                     }
-                    /*
-                    else
-                    {
-                        player = 2;
-                    }
-                    */
+                    
 #endregion CheckForWinner
 
                 
@@ -356,12 +339,7 @@ namespace tictactoe
                         player = 3;
 
                     }
-                    /*
-                    else
-                    {
-                        player = 1;
-                    }
-                    */
+                    
 #endregion CheckForWinner
 
                 }
@@ -382,13 +360,30 @@ namespace tictactoe
 
                 }
 #endregion SetUpdatedBoard
-
-
+                    ;
+                
             }
             while (player != 3);
+            
 #endregion userInput
             Console.WriteLine("press key to exit");
-            Console.Read();                      
-        }                     
+            
+            Console.ReadKey();
+        }       
+        
+
+        public static void setBoard()
+        {
+            
+            for (int i = 0; i < rowLength; i++)
+            {
+                for (int j = 0; j < colLength; j++)
+                {
+                    Console.Write(" {0} ", board[i, j] + "\t");
+
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
