@@ -1,7 +1,7 @@
 C:\Users\Kontor\Documents\c#\tictactoe\tictactoe\bin\Debug\tictactoe.exe.config
 C:\Users\Kontor\Documents\c#\tictactoe\tictactoe\bin\Debug\tictactoe.exe
 C:\Users\Kontor\Documents\c#\tictactoe\tictactoe\bin\Debug\tictactoe.pdb
-C:\Users\Kontor\Documents\c#\tictactoe\tictactoe\obj\Debug\tictactoe.csprojAssemblyReference.cache
 C:\Users\Kontor\Documents\c#\tictactoe\tictactoe\obj\Debug\tictactoe.csproj.CoreCompileInputs.cache
 C:\Users\Kontor\Documents\c#\tictactoe\tictactoe\obj\Debug\tictactoe.exe
 C:\Users\Kontor\Documents\c#\tictactoe\tictactoe\obj\Debug\tictactoe.pdb
+C:\Users\Kontor\Documents\c#\tictactoe\tictactoe\obj\Debug\tictactoe.csprojAssemblyReference.cache
