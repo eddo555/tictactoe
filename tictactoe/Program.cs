@@ -11,11 +11,11 @@ namespace tictactoe
     {     
         static void Main(string[] args)
         {
-            bool done = false;
+           
 
            
 
-                int player = 0;
+                int player = 1;
 #region InitializeBoard
             //initialize and display board
 
@@ -40,299 +40,334 @@ namespace tictactoe
                 }
 #endregion InitializeBoard
 
+
+#region userInput
+
+
             do
             {
-#region userInput
-                
 
-                for (int k = 0; k < 10; k++)
+                if (player == 1)
                 {
-                    if (player % 2 == 0)
+                    Console.WriteLine("Player 1: enter value to cross");
+                    string value = Console.ReadLine();
+
+                    switch (value)
                     {
-                        Console.WriteLine("Player 1: enter value to cross");
-                        string value = Console.ReadLine();
+                        case "1":
 
-                        switch (value)
-                        {
-                            case "1":
-
-                                if (board[0, 0].Equals("O"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[0, 0] = "X";
-                                    player++;
-                                }
-                                break;
-                            case "2":
-                                if (board[0, 1].Equals("O"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[0, 1] = "X";
-                                    player++;
-                                }
-                                break;
-                            case "3":
-                                if (board[0, 2].Equals("O"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[0, 2] = "X";
-                                    player++;
-                                }
-                                break;
-                            case "4":
-                                if (board[1, 0].Equals("O"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[1, 0] = "X";
-                                    player++;
-                                }
-                                break;
-                            case "5":
-                                if (board[1, 1].Equals("O"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[1, 1] = "X";
-                                    player++;
-                                }
-                                break;
-                            case "6":
-                                if (board[1, 2].Equals("O"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[1, 2] = "X";
-                                    player++;
-                                }
-                                break;
-                            case "7":
-                                if (board[2, 0].Equals("O"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[2, 0] = "X";
-                                    player++;
-                                }
-                                break;
-                            case "8":
-                                if (board[2, 1].Equals("O"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[2, 1] = "X";
-                                    player++;
-                                }
-                                break;
-                            case "9":
-                                if (board[2, 2].Equals("O"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[2, 2] = "X";
-                                    player++;
-                                }
-                                break;
-                            default:
-                                Console.WriteLine("invalid selection");
-                                break;
-                        }
+                            if (board[0, 0].Equals("O"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[0, 0] = "X";
+                            }
+                            break;
+                        case "2":
+                            if (board[0, 1].Equals("O"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[0, 1] = "X";
+                            }
+                            break;
+                        case "3":
+                            if (board[0, 2].Equals("O"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[0, 2] = "X";
+                            }
+                            break;
+                        case "4":
+                            if (board[1, 0].Equals("O"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[1, 0] = "X";
+                            }
+                            break;
+                        case "5":
+                            if (board[1, 1].Equals("O"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[1, 1] = "X";
+                            }
+                            break;
+                        case "6":
+                            if (board[1, 2].Equals("O"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[1, 2] = "X";
+                            }
+                            break;
+                        case "7":
+                            if (board[2, 0].Equals("O"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[2, 0] = "X";
+                            }
+                            break;
+                        case "8":
+                            if (board[2, 1].Equals("O"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[2, 1] = "X";
+                            }
+                            break;
+                        case "9":
+                            if (board[2, 2].Equals("O"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[2, 2] = "X";
+                            }
+                            break;
+                        default:
+                            Console.WriteLine("invalid selection");
+                            break;
                     }
-                    else
-                    {
-
-                        Console.WriteLine("Player 2: enter value to cross");
-                        string value = Console.ReadLine();
-                        switch (value)
-                        {
-                            case "1":
-                                if (board[0, 0].Equals("X"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[0, 0] = "O";
-                                    player++;
-                                }
-                                break;
-                            case "2":
-                                if (board[0, 1].Equals("X"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[0, 1] = "O";
-                                    player++;
-                                }
-                                break;
-                            case "3":
-                                if (board[0, 2].Equals("X"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[0, 2] = "O";
-                                    player++;
-                                }
-                                break;
-                            case "4":
-                                if (board[1, 0].Equals("X"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[1, 0] = "O";
-                                    player++;
-                                }
-                                break;
-                            case "5":
-                                if (board[1, 1].Equals("X"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[1, 1] = "O";
-                                    player++;
-                                }
-                                break;
-                            case "6":
-                                if (board[1, 2].Equals("X"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[1, 2] = "O";
-                                    player++;
-                                }
-                                break;
-                            case "7":
-                                if (board[2, 0].Equals("X"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[2, 0] = "O";
-                                    player++;
-                                }
-                                break;
-                            case "8":
-                                if (board[2, 1].Equals("X"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[2, 1] = "O";
-                                    player++;
-                                }
-                                break;
-                            case "9":
-                                if (board[2, 2].Equals("X"))
-                                {
-                                    Console.WriteLine("number already taken");
-                                }
-                                else
-                                {
-                                    board[2, 2] = "O";
-                                    player++;
-                                }
-                                break;
-                            default:
-                                Console.WriteLine("invalid selection");
-                                break;
-                        }
-
-                    }
-
-#region SetUpdatedBoard
-                    for (int i = 0; i < rowLength; i++)
-                    {
-                        Console.WriteLine(done);
-                        for (int j = 0; j < colLength; j++)
-                        {
-                            Console.Write(" {0} ", board[i, j] + "\t");
-
-                        }
-                        Console.WriteLine();
-
-                    }
-#endregion SetUpdatedBoard
 #region CheckForWinner
-                    //check for winner
+                  
                     if (board[0, 0] == board[0, 1] && board[0, 0] == board[0, 2])
                     {
 
-                        Console.WriteLine("endgame");
-                        
-                        done = true;
-                        Console.WriteLine(done);
+                        Console.WriteLine("Player {0} wins", player);
+                        player = 3;
+
                     }
-                    if (board[1, 0] == board[1, 1] && board[1, 0] == board[1, 2])
+                    else if (board[1, 0] == board[1, 1] && board[1, 0] == board[1, 2])
                     {
 
-                        Console.WriteLine("endgame");
+                        Console.WriteLine("Player {0} wins", player);
+                        player = 3;
 
-                        done = true;
-                        Console.WriteLine(done);
                     }
-                    if (board[2, 0] == board[2, 1] && board[2, 0] == board[2, 2])
+                    else if (board[2, 0] == board[2, 1] && board[2, 0] == board[2, 2])
                     {
 
-                        Console.WriteLine("endgame");
+                        Console.WriteLine("Player {0} wins", player);
+                        player = 3;
 
-                        done = true;
-                        Console.WriteLine(done);
                     }
-                    if (board[0, 0] == board[1, 1] && board[0, 0] == board[2, 2])
+                    else if (board[0, 0] == board[1, 1] && board[0, 0] == board[2, 2])
                     {
 
-                        Console.WriteLine("endgame");
 
-                        done = true;
-                        Console.WriteLine(done);
+                        Console.WriteLine("Player {0} wins", player);
+                        player = 3;
+
                     }
-                    if (board[0, 2] == board[1, 1] && board[0, 2] == board[2, 0])
+                    else if (board[0, 2] == board[1, 1] && board[0, 2] == board[2, 0])
                     {
 
-                        Console.WriteLine("endgame");
+                        Console.WriteLine("Player {0} wins", player);
+                        player = 3;
 
-                        done = true;
-                        Console.WriteLine(done);
+                    }
+                    else
+                    {
+                        player = 2;
+                    }
+#endregion CheckForWinner
+
+                
+
+                }
+                else if (player == 2)
+                {
+
+                    Console.WriteLine("Player 2: enter value to cross");
+                    string value = Console.ReadLine();
+                    switch (value)
+                    {
+                        case "1":
+                            if (board[0, 0].Equals("X"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[0, 0] = "O";
+                            }
+                            break;
+                        case "2":
+                            if (board[0, 1].Equals("X"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[0, 1] = "O";
+                            }
+                            break;
+                        case "3":
+                            if (board[0, 2].Equals("X"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[0, 2] = "O";
+                            }
+                            break;
+                        case "4":
+                            if (board[1, 0].Equals("X"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[1, 0] = "O";
+                            }
+                            break;
+                        case "5":
+                            if (board[1, 1].Equals("X"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[1, 1] = "O";
+                            }
+                            break;
+                        case "6":
+                            if (board[1, 2].Equals("X"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[1, 2] = "O";
+                            }
+                            break;
+                        case "7":
+                            if (board[2, 0].Equals("X"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[2, 0] = "O";
+                            }
+                            break;
+                        case "8":
+                            if (board[2, 1].Equals("X"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[2, 1] = "O";
+                            }
+                            break;
+                        case "9":
+                            if (board[2, 2].Equals("X"))
+                            {
+                                Console.WriteLine("number already taken");
+                            }
+                            else
+                            {
+                                board[2, 2] = "O";
+                            }
+                            break;
+                        default:
+                            Console.WriteLine("invalid selection");
+                            break;
+                    }
+
+#region CheckForWinner
+                   
+                    if (board[0, 0] == board[0, 1] && board[0, 0] == board[0, 2])
+                    {
+
+                        Console.WriteLine("Player {0} wins", player);
+                        player = 3;
+
+                    }
+                    else if (board[1, 0] == board[1, 1] && board[1, 0] == board[1, 2])
+                    {
+
+                        Console.WriteLine("Player {0} wins", player);
+                        player = 3;
+
+                    }
+                    else if (board[2, 0] == board[2, 1] && board[2, 0] == board[2, 2])
+                    {
+
+                        Console.WriteLine("Player {0} wins", player);
+                        player = 3;
+
+                    }
+                    else if (board[0, 0] == board[1, 1] && board[0, 0] == board[2, 2])
+                    {
+
+
+
+                        Console.WriteLine("Player {0} wins", player);
+                        player = 3;
+
+                    }
+                    else if (board[0, 2] == board[1, 1] && board[0, 2] == board[2, 0])
+                    {
+
+                        Console.WriteLine("Player {0} wins", player);
+                        player = 3;
+
+                    }
+                    else
+                    {
+                        player = 1;
                     }
 #endregion CheckForWinner
 
                 }
-                #endregion userInput
-            } while (done == false);
-                Console.Read();                      
+
+
+
+
+#region SetUpdatedBoard
+                for (int i = 0; i < rowLength; i++)
+                {
+
+                    for (int j = 0; j < colLength; j++)
+                    {
+                        Console.Write(" {0} ", board[i, j] + "\t");
+
+                    }
+                    Console.WriteLine();
+
+                }
+#endregion SetUpdatedBoard
+
+
+            }
+            while (player != 3);
+#endregion userInput
+            Console.WriteLine("press key to exit");
+            Console.Read();                      
         }                     
     }
 }
